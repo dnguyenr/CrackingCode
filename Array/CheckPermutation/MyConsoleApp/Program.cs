@@ -1,12 +1,12 @@
-﻿using System;
+﻿using MyConsoleApp;
 
-namespace MyConsoleApp
+namespace MyConsoleApp;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-             string[][] testCases = new string[][]
+        string[][] testCases = new string[][]
         {
             new string[] { "listen", "silent", "True" },
             new string[] { "triangle", "integral", "True" },
@@ -20,7 +20,7 @@ namespace MyConsoleApp
             string str2 = testCase[1];
             bool expected = bool.Parse(testCase[2]);
 
-            bool result = CheckPer(str1, str2);
+            bool result = Permutation.CheckPer(str1, str2);
 
             Console.WriteLine($"CheckPer(\"{str1}\", \"{str2}\") = {result} (Expected: {expected})");
             if (result == expected)
@@ -33,6 +33,5 @@ namespace MyConsoleApp
             }
             Console.WriteLine();
         }
-    
     }
 }
