@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace 
+namespace MyUnique
 {
     public class UniqueChar
     {
@@ -12,7 +12,7 @@ namespace
                 return false;
             }
             bool[] char = new bool[128];
-            for each (char c in str){
+            foreach (char c in str){
                 //convert char to ASCII
                 int val = (int) c;
                 //check if char has been seen before
